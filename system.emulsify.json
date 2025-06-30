@@ -1,0 +1,38 @@
+{
+  "name": "emulsify-ui-kit",
+  "homepage": "https://github.com/emulsify-ds/emulsify-ui-kit",
+  "repository": "https://github.com/emulsify-ds/emulsify-ui-kit.git",
+  "structure": [
+    {
+      "name": "components",
+      "description": "Components commonly used in higher-level components"
+    }
+  ],
+  "variants": [
+    {
+      "platform": "drupal",
+      "structureImplementations": [
+        {
+          "name": "components",
+          "directory": "./src/components/"
+        }
+      ],
+      "components": [
+        {
+          "name": "button",
+          "structure": "components",
+          "required": true,
+          "dependency": [
+            "icons"
+          ]
+        },
+        {
+          "name": "icons",
+          "structure": "components",
+          "required": true,
+          "dependency": []
+        }
+      ]
+    }
+  ]
+}
