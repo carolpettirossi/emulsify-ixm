@@ -1,0 +1,35 @@
+{
+  "project": {
+    "platform": "drupal",
+    "name": "emulsify-ixm",
+    "machineName": "emulsify-ixm"
+  },
+  "starter": {
+    "repository": "https://github.com/carolpettirossi/emulsify-ixm.git"
+  },
+  "system": {
+    "repository": "https://github.com/carolpettirossi/emulsify-ixm.git",
+    "checkout": "main"
+  },
+  "variant": {
+    "platform": "drupal",
+    "structureImplementations": [
+      {
+        "name": "components",
+        "directory": "./src/components/"
+      },
+      {
+        "name": "foundation",
+        "directory": "./src/foundation/"
+      },
+      {
+        "name": "layout",
+        "directory": "./src/layout/"
+      },
+      {
+        "name": "tokens",
+        "directory": "./src/tokens/"
+      }
+    ]
+  }
+}
