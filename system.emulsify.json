@@ -1,7 +1,8 @@
 {
-  "name": "emulsify-ui-kit",
-  "homepage": "https://github.com/emulsify-ds/emulsify-ui-kit",
-  "repository": "https://github.com/emulsify-ds/emulsify-ui-kit.git",
+  "name": "emulsify-ixm",
+  "description": "Design system for IXM using Emulsify",
+  "homepage": "https://github.com/carolpettirossi/emulsify-ixm.git",
+  "repository": "https://github.com/carolpettirossi/emulsify-ixm.git",
   "structure": [
     {
       "name": "components",
