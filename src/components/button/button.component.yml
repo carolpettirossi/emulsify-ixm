@@ -1,0 +1,13 @@
+name: Button
+group: Components
+status: stable
+props:
+  type: object
+  properties:
+    button__additional_classes:
+      type: array
+      title: Additional classes
+      description: Additional classes for button.
+      data:
+        - 'button--hover'
+        - 'button--focus'

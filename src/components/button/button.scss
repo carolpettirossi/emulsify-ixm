@@ -1,0 +1,157 @@
+@use "sass:string";
+
+// Add functions to this file.
+@function to-rem($size-px) {
+  @return ($size-px / 16px) * 1rem;
+}
+
+.btn {
+  text-decoration: none;
+
+  // Primary
+
+  &-primary {
+    --#{$prefix}btn-bg: #{$primary};
+    --#{$prefix}btn-hover-bg: #{$primary-dark};
+    --#{$prefix}btn-active-bg: #{$primary-dark};
+    --#{$prefix}btn-active-border-color: #{$primary-dark};
+  }
+
+  // Secondary
+
+  &-secondary {
+    --#{$prefix}btn-bg: #{$secondary};
+    --#{$prefix}btn-hover-bg: #{$secondary-dark};
+    --#{$prefix}btn-active-bg: #{$secondary-dark};
+    --#{$prefix}btn-active-border-color: #{$secondary-dark};
+  }
+
+  // Tertiary
+
+  &-tertiary {
+    --#{$prefix}btn-bg: #{$tertiary};
+    --#{$prefix}btn-hover-bg: #{$tertiary-dark};
+    --#{$prefix}btn-active-bg: #{$tertiary-dark};
+    --#{$prefix}btn-active-border-color: #{$tertiary-dark};
+  }
+
+  // Pill
+
+  &-pill {
+    --#{$prefix}btn-border-radius: 50px;
+    --#{$prefix}btn-border-color: #{$primary-dark};
+    --#{$prefix}btn-hover-border-color: #{$primary-dark};
+    --#{$prefix}btn-hover-bg: #{$primary-dark};
+    --#{$prefix}btn-hover-color: #{$white};
+    --#{$prefix}btn-font-size: #{$font-size-sm};
+    --#{$prefix}btn-font-weight: #{$font-weight-normal};
+    --#{$prefix}btn-padding-x: #{to-rem(12px)};
+    --#{$prefix}btn-padding-y: #{to-rem(2px)};
+  }
+
+  // Icon
+
+  &-icon {
+    @extend %btn-icon;
+  }
+
+  // Disabled {
+
+  &:not(.btn-outline, .btn-outline-primary, .btn-outline-secondary) {
+    &:disabled {
+      --#{$prefix}btn-disabled-bg: #{$gray-300};
+      --#{$prefix}btn-disabled-border-color: #{$gray-300};
+
+      cursor: not-allowed;
+    }
+  }
+
+  // Outline button
+
+  &-outline {
+    --#{$prefix}btn-color: #{$body-color};
+    --#{$prefix}btn-border-color: #{$body-color};
+    --#{$prefix}btn-hover-bg: #{$body-color};
+    --#{$prefix}btn-hover-color: #{$body-bg};
+    --#{$prefix}btn-hover-border-color: #{$body-color};
+    --#{$prefix}btn-active-bg: #{$body-color};
+    --#{$prefix}btn-active-color: #{$body-bg};
+    --#{$prefix}btn-active-border-color: #{$body-color};
+
+    @include outline-disabled;
+  }
+
+  // Outline primary
+
+  &-outline-primary {
+    --#{$prefix}btn-color: #{$primary-dark};
+    --#{$prefix}btn-border-color: #{$primary-dark};
+    --#{$prefix}btn-hover-bg: #{$primary-dark};
+    --#{$prefix}btn-hover-color: #{$body-bg};
+    --#{$prefix}btn-hover-border-color: #{$primary-dark};
+    --#{$prefix}btn-active-bg: #{$primary-dark};
+    --#{$prefix}btn-active-color: #{$body-bg};
+    --#{$prefix}btn-active-border-color: #{$primary-dark};
+
+    @include outline-disabled;
+  }
+
+  // Outline secondary
+
+  &-outline-secondary {
+    --#{$prefix}btn-color: #{$secondary-dark};
+    --#{$prefix}btn-border-color: #{$secondary-dark};
+    --#{$prefix}btn-hover-bg: #{$secondary-dark};
+    --#{$prefix}btn-hover-color: #{$body-bg};
+    --#{$prefix}btn-hover-border-color: #{$secondary-dark};
+    --#{$prefix}btn-active-bg: #{$secondary-dark};
+    --#{$prefix}btn-active-color: #{$body-bg};
+    --#{$prefix}btn-active-border-color: #{$secondary-dark};
+
+    @include outline-disabled;
+  }
+
+  // Outline bold
+
+  &-outline-bold {
+    --#{$prefix}btn-color: #{$white};
+    --#{$prefix}btn-border-color: #{$green};
+    --#{$prefix}btn-hover-border-color: #{$green-dark};
+    --#{$prefix}btn-border-width: #{to-rem(2px)};
+    --#{$prefix}btn-padding-x: #{to-rem(20px)};
+    --#{$prefix}btn-padding-y: #{to-rem(10px)};
+
+    @include outline-disabled;
+  }
+
+  // Rounded
+  &-round {
+    --#{$prefix}btn-border-radius: #{$border-radius-pill};
+    --#{$prefix}btn-padding-y: #{to-rem(5px)};
+    --#{$prefix}btn-padding-x: #{to-rem(5px)};
+  }
+
+  // Semi Rounded
+  &-semi-round {
+    --#{$prefix}btn-border-radius: 0.5rem;
+  }
+
+  // Extra Small
+
+  &.btn-xs {
+    --#{$prefix}btn-padding-y: #{to-rem(4px)};
+    --#{$prefix}btn-padding-x: #{to-rem(15px)};
+  }
+
+  // Small
+
+  &.btn-sm {
+    --#{$prefix}btn-padding-y: #{to-rem(9px)};
+  }
+
+  // Large
+
+  &.btn-lg {
+    --#{$prefix}btn-padding-y: #{to-rem(19px)};
+  }
+}
